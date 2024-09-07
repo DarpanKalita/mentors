@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Tailwind CSS Configuration */
+    @layer utilities {
+      .shake {
+        animation: shake 0.3s ease-in-out;
+      }
+      @keyframes shake {
+        0%, 100% {
+          transform: translateX(0);
+        }
+        25%, 75% {
+          transform: translateX(-5px);
+        }
+        50% {
+          transform: translateX(5px);
+        }
+      }
+    }
+      body {
+          background-image: url('background.jpg'); /* Replace with your image */
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+      }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Main Container -->
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white opacity-85 shadow-md rounded-lg w-full max-w-lg p-8 relative">
+
+      <!-- Loading Spinner (hidden by default) -->
+      <div id="loadingSpinner" class="hidden absolute inset-0 bg-gray-100 bg-opacity-75 flex items-center justify-center z-10">
+        <div class="animate-spin h-10 w-10 border-4 border-blue-400 border-t-transparent rounded-full"></div>
+      </div>
+
+      <!-- Form Title -->
+      <h2 class="text-3xl font-semibold text-center mb-8">Contact Us</h2>
+
+      <!-- Success Alert -->
+      <div id="successAlert" class="hidden mb-6 bg-green-100 text-green-700 p-4 rounded-md">
+        <strong>Success!</strong> Your message has been sent.
+      </div>
+
+      <!-- Error Alert -->
+      <div id="errorAlert" class="hidden mb-6 bg-red-100 text-red-700 p-4 rounded-md">
+        <strong>Error!</strong> Please fill out all required fields correctly.
+      </div>
+
+      <!-- Contact Form -->
+      <form id="contactForm" class="space-y-6">
+
+        <!-- Name Input -->
+        <div class="mb-6">
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name (required)</label>
+          <input type="text" id="name" name="name" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+
+        <!-- Email Input -->
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email address (required)</label>
+          <input type="email" id="email" name="email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+
+        <!-- Message Textarea -->
+        <div class="mb-6">
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Message (required)</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+          <p id="messageError" class="hidden text-red-500 text-sm mt-1">Please enter a message.</p>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit" class="text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript for form validation and interaction -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const successAlert = document.getElementById('successAlert');
+    const errorAlert = document.getElementById('errorAlert');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      // Clear previous alerts
+      successAlert.classList.add('hidden');
+      errorAlert.classList.add('hidden');
+      form.classList.remove('shake');
+
+      // Clear error messages
+      document.querySelectorAll('.text-red-500').forEach(el => el.classList.add('hidden'));
+
+      // Form validation
+      let isValid = true;
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name === '') {
+        document.getElementById('nameError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (email === '' || !emailPattern.test(email)) {
+        document.getElementById('emailError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      if (message === '') {
+        document.getElementById('messageError').classList.remove('hidden');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        // Shake form if validation fails
+        form.classList.add('shake');
+        errorAlert.classList.remove('hidden');
+        return;
+      }
+
+      // Simulate form submission
+      submitBtn.disabled = true;
+      loadingSpinner.classList.remove('hidden');
+
+      setTimeout(() => {
+        loadingSpinner.classList.add('hidden');
+        submitBtn.disabled = false;
+
+        // Show success message
+        successAlert.classList.remove('hidden');
+        form.reset();
+      }, 2000); // Simulate server processing time (2 seconds)
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentors Nexus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+          <style>
+              body {
+                  font-family: 'Inter', sans-serif;
+              }
+              
+              /* Custom hover animations for images and cards */
+              .hover-scale:hover {
+                  transform: scale(1.05);
+                  transition: transform 0.3s ease-in-out;
+              }
+              
+              .hover-glow:hover {
+                  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+                  transition: box-shadow 0.3s ease-in-out;
+              }
+          </style>
+          <style>
+              /* Add background dynamically */
+              body {
+                  background-image: url('backgroun.jpg'); /* Replace with your image URL */
+                  background-size: cover;
+                  background-position: center;
+                  background-attachment: fixed;
+              }
+          </style>
+
+</head>
+<body class="bg-white text-gray-800">
+   
+   <!-- Double Header -->
+   <div class="bg-gray-800 text-white py-2">
+        <div class="container mx-auto flex justify-end space-x-4">
+          <a href="login.html" class="hover:underline">Login</a>
+          <a href="signup.html" class="hover:underline">Sign Up</a>
+          <a href="contact.html" class="text-white bg-green-400 hover:bg-green-600 py-1 px-3 rounded-lg transition-colors duration-300">Contact Us</a>
+        </div>
+      </div>
+  
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-10 py-5 border-b">
+    <h1 class="text-lg font-semibold">Mentors Nexus</h1>
+    <nav class="space-x-6">
+      <a href="#" class="text-gray-600 hover:text-black">Services</a>
+      <a href="schedule.html" class="text-gray-600 hover:text-black">Scheduling</a>
+      <a href="video.html" class="text-gray-600 hover:text-black">Video</a>
+      <a href="#" class="text-gray-600 hover:text-black">Customer Reviews</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="flex flex-col md:flex-row items-center justify-between px-10 py-16">
+    <!-- Text Section -->
+    <div class="md:w-1/2">
+      <h2 class="text-4xl font-bold leading-tight mb-6">Empower Your Career Journey</h2>
+      <p class="text-gray-600 mb-6">
+        At Mentors Nexus, we connect aspiring candidates with experienced mentors to foster growth and success in their careers.
+        Our platform facilitates meaningful interactions, providing you with guidance tailored to your unique needs. Join us in
+        transforming your career path with expert insights and support.
+      </p>
+      <a href="#" class="inline-block text-green-500 bg-green-100 hover:bg-green-300 py-3 px-6 rounded-lg transition-colors duration-500">Contact Us</a>
+    </div>
+    
+    <!-- Image Section -->
+    <div class="md:w-1/2 mt-10 md:mt-0">
+      <img src="https://placehold.co/600x400" alt="Group of people participating in a mentoring event outdoors" class="rounded-lg shadow-lg hover-scale">
+    </div>
+  </main>
+
+  <!-- Our Services Section -->
+  <section class="bg-gray-50 py-16">
+    <div class="text-center mb-12">
+      <h3 class="text-3xl font-bold">Our Services</h3>
+    </div>
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-8 px-10">
+      <!-- Service 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden w-80 hover-glow hover-scale transition duration-300">
+        <img src="https://placehold.co/400x300" alt="Two people discussing mentoring options in an office" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-4">Personalized Mentoring Sessions</h4>
+          <p class="text-gray-600">
+            Connect with experienced mentors for one-on-one personalized guidance tailored to your career aspirations.
+            Our mentors provide insights and strategies to help you navigate your professional journey effectively.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden w-80 hover-glow hover-scale transition duration-300">
+        <img src="https://placehold.co/400x300" alt="Calendar with automated booking system in place" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-4">Automated Booking System</h4>
+          <p class="text-gray-600">
+            Utilize our automated calendar system to easily schedule mentoring sessions at your convenience. This feature
+            ensures that you can connect with mentors without any hassle of back-and-forth scheduling.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden w-80 hover-glow hover-scale transition duration-300">
+        <img src="https://placehold.co/400x300" alt="A networking event being captured on a phone" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-4">Networking Opportunities</h4>
+          <p class="text-gray-600">
+            Join exclusive networking events to connect with industry leaders and fellow mentees.
+            Expand your professional circle and discover new opportunities through these valuable interactions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Section: Empower Your Future -->
+  <section class="py-16 text-center bg-white">
+    <h3 class="text-3xl font-semibold mb-4">Empower your future through mentorship and guidance.</h3>
+    <p class="text-gray-600 mb-8">Connect with your mentor today!</p>
+    <div class="max-w-6xl mx-auto">
+      <img src="https://placehold.co/1000x500" alt="People sitting together during a mentoring session" class="rounded-lg shadow-lg w-full h-auto">
+    </div>
+  </section>
+
+  <!-- New Section: Unlock Your Potential -->
+  <section class="py-16 text-center bg-gray-50">
+    <h3 class="text-3xl font-semibold mb-4">Connect with a Mentor and Unlock Your Potential</h3>
+    <p class="text-gray-600 mb-8">
+      Schedule a session to gain insights and guidance tailored to your career aspirations.
+    </p>
+    <a href="#" class="inline-block bg-green-400 hover:bg-green-500 text-white py-3 px-8 rounded-lg transition-colors duration-300">
+      Schedule Now
+    </a>
+  </section>
+  
+  <!-- New Section: Unlock Your Career Potential -->
+  <section class="py-16 text-center bg-white">
+    <h3 class="text-3xl font-semibold mb-4">Unlock Your Career Potential</h3>
+    
+    <!-- Video Placeholder -->
+    <div class="flex justify-center items-center bg-gray-200 w-full h-80 rounded-lg">
+      <i class="fas fa-video-slash text-6xl text-gray-400"></i>
+    </div>
+    
+    <p class="text-gray-600 mt-8 max-w-3xl mx-auto">
+      Discover how Mentors Nexus connects aspiring professionals with industry experts for personalized guidance.
+      Our platform empowers mentees to navigate their career paths through effective mentoring relationships.
+      Join us in building a brighter future through knowledge and support.
+    </p>
+  </section>
+
+  <!-- New Section: Customer Reviews with Slider -->
+  <section class="py-16 text-center bg-gray-50">
+    <h3 class="text-3xl font-semibold mb-8">Reviews</h3>
+    
+    <!-- Slider -->
+    <div class="relative max-w-4xl mx-auto">
+      <div id="reviewSlider" class="text-gray-700">
+        <!-- Review 1 -->
+        <div class="review">
+          <p class="text-lg italic">"Mentors Nexus has been a game-changer for my career! The mentoring I received helped me navigate my job search with confidence and clarity. I highly recommend it to anyone looking to enhance their skills and career prospects."</p>
+          <p class="font-semibold mt-4">Example Customer Review 1</p>
+        </div>
+        <!-- Review 2 -->
+        <div class="review hidden">
+          <p class="text-lg italic">"The platform provided me with the tools and knowledge I needed to succeed. My mentor was incredibly supportive and helped me identify my strengths and areas of improvement."</p>
+          <p class="font-semibold mt-4">Example Customer Review 2</p>
+        </div>
+        <!-- Review 3 -->
+        <div class="review hidden">
+          <p class="text-lg italic">"Thanks to Mentors Nexus, I was able to grow my professional network and gain valuable industry insights. I would highly recommend this service to anyone serious about their career."</p>
+          <p class="font-semibold mt-4">Example Customer Review 3</p>
+        </div>
+        <!-- Review 4 -->
+        <div class="review hidden">
+          <p class="text-lg italic">"My mentor helped me land my dream job! The personalized guidance and actionable feedback were exactly what I needed to stay focused on my career goals."</p>
+          <p class="font-semibold mt-4">Example Customer Review 4</p>
+        </div>
+        <!-- Review 5 -->
+        <div class="review hidden">
+          <p class="text-lg italic">"The mentoring sessions were incredibly insightful, and I gained a lot of confidence in my career path. The entire experience was smooth, and the mentors were top-notch."</p>
+          <p class="font-semibold mt-4">Example Customer Review 5</p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="absolute inset-y-0 left-0 flex items-center">
+        <button id="prevBtn" class="text-gray-500 hover:text-black p-3">
+          <i class="fas fa-chevron-left text-xl"></i>
+        </button>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center">
+        <button id="nextBtn" class="text-gray-500 hover:text-black p-3">
+          <i class="fas fa-chevron-right text-xl"></i>
+        </button>
+      </div>
+      
+      <!-- Pagination -->
+      <p id="reviewIndex" class="text-gray-500 mt-6">1 of 5</p>
+    </div>
+  </section>
+
+  <script>
+    const reviews = document.querySelectorAll('.review');
+    const totalReviews = reviews.length;
+    let currentReview = 0;
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      reviews[currentReview].classList.add('hidden');
+      currentReview = (currentReview + 1) % totalReviews;
+      reviews[currentReview].classList.remove('hidden');
+      updateReviewIndex();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      reviews[currentReview].classList.add('hidden');
+      currentReview = (currentReview - 1 + totalReviews) % totalReviews;
+      reviews[currentReview].classList.remove('hidden');
+      updateReviewIndex();
+    });
+
+    function updateReviewIndex() {
+      document.getElementById('reviewIndex').textContent = `${currentReview + 1} of ${totalReviews}`;
+    }
+  </script>
+
+  <section class="contact-us-section bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-8">Contact Us</h2>
+      <form action="/submit-your-contact-info" method="post" class="max-w-lg mx-auto">
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email address (required)</label>
+          <input type="email" id="email" name="email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+        <div class="mb-6">
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name (required)</label>
+          <input type="text" id="name" name="name" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+        <div class="mb-6">
+          <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone number</label>
+          <input type="tel" id="phone" name="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Message (required)</label>
+          <textarea id="message" name="message" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" rows="4"></textarea>
+        </div>
+        <button type="submit" class="text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Contact Us</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer bg-gray-100 py-8 mt-16">
+      <div class="container mx-auto text-center">
+          <p class="text-gray-600">&copy; 2024 Mentors Nexus</p>
+         <!-- <p class="text-sm text-gray-500 mt-2">Made with <span class="font-bold">Solo</span></p> -->
+      </div>
+  </footer>
+  
+</body>
+</html>
